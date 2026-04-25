@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
+import { siteConfig } from "@/data/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,8 +54,18 @@ export default function RootLayout({
         <main className="mx-auto flex w-full max-w-6xl flex-1 flex-col px-6 py-8 sm:py-12">
           {children}
         </main>
-        <footer className="border-t border-slate-800 py-6 text-center text-sm text-slate-400">
-          Built with Next.js and Tailwind CSS.
+        <footer className="border-t border-slate-800 px-6 py-6 text-center text-sm text-slate-400">
+          <div className="mx-auto flex max-w-6xl flex-col items-center gap-4">
+            <a
+              href={siteConfig.resumeUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full border border-cyan-400 px-5 py-2.5 text-sm font-medium text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950"
+            >
+              Download Resume
+            </a>
+            <p>@2026 Rahul Naidu</p>
+          </div>
         </footer>
         <Analytics />
       </body>

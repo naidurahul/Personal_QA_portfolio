@@ -11,14 +11,14 @@ export function Hero() {
         {profile.availability}
       </p>
       {/* <p className="text-sm font-medium tracking-wide text-cyan-300">Get To Know Me</p> */}
-      <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-slate-50 sm:text-6xl">
+      <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-slate-50 sm:text-4xl">
         {siteConfig.name}
       </h1>
       <h2 className="mt-4 max-w-3xl text-xl font-medium text-slate-200 sm:text-2xl">
         {siteConfig.title}
       </h2>
       {/* <p className="mt-4 text-base font-medium text-cyan-300">{profile.greeting}</p> */}
-      <p className="mt-5 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
+      <p className="mt-5 max-w-3xl text-base leading-8 text-slate-300 sm:text-lg">
         {siteConfig.shortBio}
       </p>
       <div className="mt-8 flex flex-wrap gap-3">

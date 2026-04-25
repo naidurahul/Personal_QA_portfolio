@@ -5,7 +5,7 @@ export const siteConfig = {
     "Crafting reliable digital experiences with clean quality processes and thoughtful testing.",
   email: "naidurahul5555@example.com",
   location: "Itahari, Nepal",
-  resumeUrl: "/Rahul QA CV.pdf",
+  resumeUrl: "/Rahul%20QA%20CV.pdf",
   socialLinks: {
     github: "https://github.com/naidurahul",
     linkedin: "https://www.linkedin.com/in/rahul-n-9b34411b7/",
@@ -22,7 +22,7 @@ export const profile = {
   // greeting: "Hello, I'm Rahul Naidu",
   about:
     "I lead and execute quality strategies for SaaS and product teams, from end-to-end validation to performance testing under load. I focus on actionable bug reporting, robust coverage, and user-centric quality outcomes.",
-  availability: "Available for projects",
+  availability: "Available for Collaboration",
   stats: [
     { label: "Years Experience", value: "2+" },
     { label: "Testing Domains", value: "10+" },
@@ -63,27 +63,27 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     name: "Methodologies",
-    items: ["Agile", "Scrum", "Bug Triage", "UAT Validation"],
+    items: ["Agile", "Scrum", "Bug Reporting and Tracking", "UAT Validation"],
   },
 ];
 
 export const experience = [
   {
     company: "G-mana",
-    role: "QA Engineer",
+    role: "Software QA Engineer II",
     period: "July 2024 - Present",
     achievements: [
-      "Lead manual and performance testing for a SaaS video delivery platform across web and mobile environments.",
+      "Lead Automation, manual and performance testing for a SaaS video delivery platform across web and mobile environments.",
       "Conduct end-to-end and UI/UX testing with DASH/HLS stream validation.",
       "Perform load testing with JMeter for high-traffic reliability.",
-      "Execute API validation using Postman across integration layers.",
+      "Execute API Testing using Postman across integration layers.",
       "Write detailed test cases and perform functional, regression, and integration testing in Agile sprints.",
     ],
     location: "Remote (Israel)",
   },
   {
     company: "Bross Solutions Pvt Ltd",
-    role: "QA Engineer",
+    role: "SoftwareQA Engineer I",
     period: "June 2023 - April 2024",
     achievements: [
       "Designed and executed manual and automated test cases for web applications.",
