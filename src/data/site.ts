@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "QA Engineer",
   shortBio:
     "Crafting reliable digital experiences with clean quality processes and thoughtful testing.",
-  email: "naidurahul5555@example.com",
+  email: "naidurahul5555@gmail.com",
   location: "Itahari, Nepal",
   resumeUrl: "/Rahul%20Naidu.pdf",
   socialLinks: {
