@@ -1,65 +1,161 @@
-import Image from "next/image";
+import { FadeIn } from "@/components/FadeIn";
+import { Hero } from "@/components/Hero";
+import { Section } from "@/components/Section";
+import { ExperienceTimeline } from "@/components/ExperienceTimeline";
+import { education, highlights, profile, siteConfig, skillCategories } from "@/data/site";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div className="space-y-24">
+      <FadeIn>
+        <Hero />
+      </FadeIn>
+
+      <FadeIn delay={0.08}>
+        <Section
+          title="About Me"
+          description="Testing systems with precision, performance focus, and user-centric quality standards."
+        >
+          <div className="grid gap-4 sm:grid-cols-3">
+            {profile.stats.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5 text-center"
+              >
+                <p className="text-3xl font-semibold text-slate-100">{item.value}</p>
+                <p className="mt-1 text-sm text-slate-400">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </FadeIn>
+
+      <FadeIn delay={0.15}>
+        <Section
+          title="Technology Stack"
+          description="Core tools, frameworks, and testing capabilities used in daily QA workflows."
+        >
+          <div id="stack" className="space-y-4">
+            {skillCategories.map((category) => (
+              <div
+                key={category.name}
+                className="rounded-2xl border border-slate-800 bg-slate-900/70 p-5"
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-wide text-cyan-300">
+                  {category.name}
+                </h3>
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {category.items.map((item) => (
+                    <li
+                      key={item}
+                      className="rounded-full border border-slate-700 bg-slate-950 px-3 py-1.5 text-sm text-slate-300"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Section>
+      </FadeIn>
+
+      <FadeIn delay={0.2}>
+        <Section
+          title="Experience"
+          description="Professional journey across QA engineering and front-end collaboration."
+        >
+          <div id="experience" className="space-y-8">
+            <ExperienceTimeline />
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+              <h3 className="text-lg font-semibold text-slate-100">Key Achievements</h3>
+              <ul className="mt-4 space-y-2 text-sm text-slate-300">
+                {highlights.map((item) => (
+                  <li key={item}>- {item}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+              <h3 className="text-lg font-semibold text-slate-100">Education</h3>
+              <p className="mt-3 text-sm text-slate-300">{education.degree}</p>
+              <p className="mt-1 text-sm text-cyan-300">{education.school}</p>
+              <p className="mt-1 text-xs uppercase tracking-wide text-slate-400">{education.period}</p>
+            </div>
+          </div>
+        </Section>
+      </FadeIn>
+
+      <FadeIn delay={0.28}>
+        <Section
+          title="Let's Work Together"
+          description="Open to QA roles, testing collaboration, and quality consulting opportunities."
+        >
+          <div id="contact" className="grid gap-6 md:grid-cols-2">
+            <div className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+              <h3 className="text-lg font-semibold text-slate-100">Reach Out Directly</h3>
+              <p className="mt-4 text-sm text-slate-300">
+                Email: <a href={`mailto:${siteConfig.email}`} className="text-cyan-300 hover:underline">{siteConfig.email}</a>
+              </p>
+              <p className="mt-2 text-sm text-slate-300">Location: {siteConfig.location}</p>
+              <div className="mt-5 flex gap-3">
+                <a
+                  href={siteConfig.socialLinks.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300 hover:border-slate-500"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={siteConfig.socialLinks.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300 hover:border-slate-500"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+            <form
+              action={`mailto:${siteConfig.email}`}
+              method="post"
+              encType="text/plain"
+              className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+              <h3 className="text-lg font-semibold text-slate-100">Send a Message</h3>
+              <div className="mt-4 space-y-4">
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 outline-none ring-cyan-500/30 focus:ring-2"
+                />
+                <input
+                  required
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 outline-none ring-cyan-500/30 focus:ring-2"
+                />
+                <textarea
+                  required
+                  name="message"
+                  rows={4}
+                  placeholder="Message"
+                  className="w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-200 outline-none ring-cyan-500/30 focus:ring-2"
+                />
+                <button
+                  type="submit"
+                  className="rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-medium text-slate-950 hover:bg-cyan-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </Section>
+      </FadeIn>
     </div>
   );
 }

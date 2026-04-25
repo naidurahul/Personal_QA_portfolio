@@ -1,0 +1,12 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#0A1020"/>
+  <rect x="70" y="70" width="1060" height="660" rx="26" fill="#111827" stroke="#334155"/>
+  <rect x="120" y="130" width="420" height="240" rx="18" fill="#0F172A" stroke="#1E293B"/>
+  <rect x="560" y="130" width="520" height="240" rx="18" fill="#0F172A" stroke="#1E293B"/>
+  <rect x="120" y="400" width="960" height="280" rx="18" fill="#0F172A" stroke="#1E293B"/>
+  <polyline points="170,600 320,540 420,570 560,500 680,520 810,450 980,480" stroke="#22D3EE" stroke-width="8" fill="none"/>
+  <rect x="160" y="170" width="100" height="160" rx="10" fill="#1D4ED8"/>
+  <rect x="290" y="210" width="100" height="120" rx="10" fill="#0891B2"/>
+  <rect x="420" y="190" width="100" height="140" rx="10" fill="#10B981"/>
+  <text x="120" y="115" fill="#E2E8F0" font-size="26" font-family="Arial">Support Analytics Workspace</text>
+</svg>
