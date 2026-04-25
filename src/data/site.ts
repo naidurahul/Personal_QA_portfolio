@@ -5,7 +5,7 @@ export const siteConfig = {
     "Crafting reliable digital experiences with clean quality processes and thoughtful testing.",
   email: "naidurahul5555@example.com",
   location: "Itahari, Nepal",
-  resumeUrl: "/Rahul%20QA%20CV.pdf",
+  resumeUrl: "/Rahul%20Naidu.pdf",
   socialLinks: {
     github: "https://github.com/naidurahul",
     linkedin: "https://www.linkedin.com/in/rahul-n-9b34411b7/",
@@ -25,7 +25,7 @@ export const profile = {
   availability: "Available for Collaboration",
   stats: [
     { label: "Years Experience", value: "2+" },
-    { label: "Testing Domains", value: "10+" },
+    // { label: "Testing Domains", value: "10+" },
     { label: "Coverage Boost", value: "30%" },
   ],
 };
@@ -38,24 +38,27 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Tools",
-    items: ["Playwright","Postman", "JIRA", "JMeter", "Git", "GitHub"],
+    items: ["Playwright","Postman", "JIRA", "JMeter", "Git", "GitHub Actions"],
   },
   {
     name: "Automation",
-    items: ["Playwright", "API", "GitHub Actions"],
+    items: ["Playwright", "API", "CI/CD"],
   },
   {
     name: "Programming Languages",
-    items: ["JavaScript", "Python"],
+    items: ["JavaScript", "Python", "Typescript"],
   },
   {
     name: "Testing Techniques",
     items: [
       "Manual Testing",
       "Automation Testing",
-      "Mobile App Testing",
+      // "Mobile App Testing",
       "Functional Testing",
       "Regression Testing",
+      "Integration Testing",
+      "System Testing",
+      "User Acceptance Testing",
       "Performance Testing",
       "Security Testing",
       "Smoke Testing",
@@ -73,10 +76,11 @@ export const experience = [
     role: "Software QA Engineer II",
     period: "July 2024 - Present",
     achievements: [
-      "Lead Automation, manual and performance testing for a SaaS video delivery platform across web and mobile environments.",
-      "Conduct end-to-end and UI/UX testing with DASH/HLS stream validation.",
-      "Perform load testing with JMeter for high-traffic reliability.",
-      "Execute API Testing using Postman across integration layers.",
+      "Performed Automation, manual and performance testing for a SaaS Server side ad-insertion(SSAI) platform",
+      "Conduct end-to-end and UI/UX testing across web environments",
+      "Validated HLS/DASH streaming workflows and system-level integrations.",
+      "Perform load testing with JMeter for high-traffic reliability and performance validation.",
+      "Execute API Testing using Postman across multiple integration layers.",
       "Write detailed test cases and perform functional, regression, and integration testing in Agile sprints.",
     ],
     location: "Remote (Israel)",
@@ -87,9 +91,10 @@ export const experience = [
     period: "June 2023 - April 2024",
     achievements: [
       "Designed and executed manual and automated test cases for web applications.",
-      "Conducted PMS/POS-style system validation and cross-device testing.",
-      "Managed test planning, bug triage, and reporting using JIRA.",
-      "Participated in UAT testing and release validation.",
+      // "Conducted PMS/POS-style system validation and cross-device testing.",
+      "Tested core product flows, including user roles, access control, and UI behavior",
+      "Collaborated with developers to improve testability and reduce regression issues",
+      "Reported clear, reproducible bugs with proper logs, steps, and expected results"
     ],
     location: "Biratnagar, Nepal",
   },
