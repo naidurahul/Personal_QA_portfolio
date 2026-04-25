@@ -3,12 +3,12 @@ export const siteConfig = {
   title: "QA Engineer",
   shortBio:
     "Crafting reliable digital experiences with clean quality processes and thoughtful testing.",
-  email: "your.email@example.com",
-  location: "Biratnagar, Nepal",
-  resumeUrl: "/resume.pdf",
+  email: "naidurahul5555@example.com",
+  location: "Itahari, Nepal",
+  resumeUrl: "/Rahul QA CV.pdf",
   socialLinks: {
-    github: "https://github.com/yourname",
-    linkedin: "https://www.linkedin.com/in/yourname",
+    github: "https://github.com/naidurahul",
+    linkedin: "https://www.linkedin.com/in/rahul-n-9b34411b7/",
   },
   nav: [
     { href: "/#overview", label: "Overview" },
@@ -38,14 +38,14 @@ export type SkillCategory = {
 export const skillCategories: SkillCategory[] = [
   {
     name: "Tools",
-    items: ["Postman", "JIRA", "JMeter", "Git", "GitHub"],
+    items: ["Playwright","Postman", "JIRA", "JMeter", "Git", "GitHub"],
   },
   {
     name: "Automation",
-    items: ["Playwright", "API Testing", "GitHub Actions"],
+    items: ["Playwright", "API", "GitHub Actions"],
   },
   {
-    name: "Programming",
+    name: "Programming Languages",
     items: ["JavaScript", "Python"],
   },
   {
