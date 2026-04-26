@@ -62,7 +62,7 @@ export default function RootLayout({
               rel="noreferrer"
               className="rounded-full border border-cyan-400 px-5 py-2.5 text-sm font-medium text-cyan-300 transition hover:bg-cyan-400 hover:text-slate-950"
             >
-              Download Resume
+              View Resume
             </a>
             <p>@2026 Rahul Naidu</p>
           </div>
